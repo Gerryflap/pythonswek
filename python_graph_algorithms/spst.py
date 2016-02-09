@@ -120,7 +120,7 @@ def DijkstraDirected(G, start: vertex):
     start.dist = 0
 
     # Insert your code here.
-    s = []
+    s = set()
     while len(s) != len(G.V()):
         # pick the next vertex
         minN = None
@@ -130,7 +130,7 @@ def DijkstraDirected(G, start: vertex):
                 minN = nv
 
         v = minN
-        s.append(v)
+        s.add(v)
         for e in [ne for ne in v.inclist() if ne.tail() == v]:
             relax(e)
 
