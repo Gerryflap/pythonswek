@@ -1,0 +1,648 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Module 7: Trees &mdash; Trees 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Trees 1.0 documentation" href="#" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="#">Trees 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-7-trees">
+<h1>Module 7: Trees<a class="headerlink" href="#module-7-trees" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="bintree">
+<h2>BinTree<a class="headerlink" href="#bintree" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="bintree.BinTree">
+<em class="property">class </em><tt class="descclassname">bintree.</tt><tt class="descname">BinTree</tt><big>(</big><em>old_tree=None</em><big>)</big><a class="headerlink" href="#bintree.BinTree" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Binary Search Tree.</p>
+<dl class="method">
+<dt id="bintree.BinTree.__init__">
+<tt class="descname">__init__</tt><big>(</big><em>old_tree=None</em><big>)</big><a class="headerlink" href="#bintree.BinTree.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a BinTree or copy a given BinTree.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>old_tree</strong> (<em>BinTree</em>) &#8211; Tree to copy.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="bintree.BinTree.root">
+<tt class="descname">root</tt><em class="property"> = None</em><a class="headerlink" href="#bintree.BinTree.root" title="Permalink to this definition">¶</a></dt>
+<dd><p>The root node or None if no root node exists.</p>
+<p>:type : BinNode | None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bintree.BinTree.add">
+<tt class="descname">add</tt><big>(</big><em>element</em><big>)</big><a class="headerlink" href="#bintree.BinTree.add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds the element to this BinTree.</p>
+<p>None elements cannot be added.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>element</strong> &#8211; Element to be added.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True if the element is added, False if the element is None or the tree already contains the element.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="bintree.BinTree.add_node">
+<tt class="descname">add_node</tt><big>(</big><em>element</em><big>)</big><a class="headerlink" href="#bintree.BinTree.add_node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds the element to this BinTree.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>element</strong> &#8211; Element to be added. Cannot be None.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The object added or null if this object is already contained in this tree.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="bintree.BinTree.remove">
+<tt class="descname">remove</tt><big>(</big><em>element</em><big>)</big><a class="headerlink" href="#bintree.BinTree.remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes the element from the tree.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>element</strong> &#8211; The element to be removed.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Whether the element was found;</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="bintree.BinTree.create_node">
+<tt class="descname">create_node</tt><big>(</big><em>node_or_value</em>, <em>parent</em><big>)</big><a class="headerlink" href="#bintree.BinTree.create_node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new node given a parent and a value or copies a node including its children (used for cloning).</p>
+<p>Subclasses should override this method to create their own nodes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>node_or_value</strong> (<em>BinNode | object | None</em>) &#8211; The node to copy or the value of this node.</li>
+<li><strong>parent</strong> (<em>BinNode | None</em>) &#8211; The parent of this node.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">BinNode</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="bintree.BinTree.rotate_left">
+<tt class="descname">rotate_left</tt><big>(</big><em>element</em><big>)</big><a class="headerlink" href="#bintree.BinTree.rotate_left" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotates the tree left at specified element.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>element</strong> &#8211; The object to rotate at.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Whether the node was found.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="bintree.BinTree.rotate_right">
+<tt class="descname">rotate_right</tt><big>(</big><em>element</em><big>)</big><a class="headerlink" href="#bintree.BinTree.rotate_right" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotates the tree right at specified element.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>element</strong> &#8211; The object to rotate at.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Whether the node was found.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="bintree.BinTree.left_of">
+<em class="property">static </em><tt class="descname">left_of</tt><big>(</big><em>node</em><big>)</big><a class="headerlink" href="#bintree.BinTree.left_of" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the left child of n. Returns <tt class="docutils literal"><span class="pre">None</span></tt> if <tt class="docutils literal"><span class="pre">node</span></tt> is <tt class="docutils literal"><span class="pre">None</span></tt>.</p>
+<p>You can safely chain these functions.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">BinNode | None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="bintree.BinTree.right_of">
+<em class="property">static </em><tt class="descname">right_of</tt><big>(</big><em>node</em><big>)</big><a class="headerlink" href="#bintree.BinTree.right_of" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the right child of n. Returns <tt class="docutils literal"><span class="pre">None</span></tt> if <tt class="docutils literal"><span class="pre">node</span></tt> is <tt class="docutils literal"><span class="pre">None</span></tt>.</p>
+<p>You can safely chain these functions.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">BinNode | None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="bintree.BinTree.parent_of">
+<em class="property">static </em><tt class="descname">parent_of</tt><big>(</big><em>node</em><big>)</big><a class="headerlink" href="#bintree.BinTree.parent_of" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the parent of n. Returns <tt class="docutils literal"><span class="pre">None</span></tt> if <tt class="docutils literal"><span class="pre">node</span></tt> is <tt class="docutils literal"><span class="pre">None</span></tt>.</p>
+<p>You can safely chain these functions.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">BinNode | None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="bintree.BinTree.sibling_of">
+<em class="property">static </em><tt class="descname">sibling_of</tt><big>(</big><em>node</em><big>)</big><a class="headerlink" href="#bintree.BinTree.sibling_of" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the sibling of n. Returns <tt class="docutils literal"><span class="pre">None</span></tt> if <tt class="docutils literal"><span class="pre">node</span></tt> is <tt class="docutils literal"><span class="pre">None</span></tt>.</p>
+<p>You can safely chain these functions.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">BinNode | None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="bintree.BinTree.replace_child">
+<tt class="descname">replace_child</tt><big>(</big><em>old_child</em>, <em>new_child</em><big>)</big><a class="headerlink" href="#bintree.BinTree.replace_child" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper function to replace one child with another.</p>
+<p>It will automatically check if the child is a left or a right child and will automatically set the correct
+parent and child links of the new node and parent.</p>
+<p>If oldchild is the root node, it will make newchild the new root.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>old_child</strong> (<em>BinNode</em>) &#8211; The child to be replaced.</li>
+<li><strong>new_child</strong> (<em>BinNode</em>) &#8211; The child to replace the old child with.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Requires:</strong> <tt class="docutils literal"><span class="pre">old_child</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">None</span></tt></p>
+<p><strong>Requires:</strong> <tt class="docutils literal"><span class="pre">old_child.parent</span> <span class="pre">is</span> <span class="pre">None</span></tt> (root element)
+or <tt class="docutils literal"><span class="pre">old_child.parent.left</span> <span class="pre">==</span> <span class="pre">oldchild</span></tt> (left child)
+or <tt class="docutils literal"><span class="pre">old_child.parent.light</span> <span class="pre">==</span> <span class="pre">oldchild</span></tt> (right child)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bintree.BinTree.__iter__">
+<tt class="descname">__iter__</tt><big>(</big><big>)</big><a class="headerlink" href="#bintree.BinTree.__iter__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an iterator which iterates over the elements.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">BinTreeIterator</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="bintree.BinTree.__contains__">
+<tt class="descname">__contains__</tt><big>(</big><em>element</em><big>)</big><a class="headerlink" href="#bintree.BinTree.__contains__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns whether the element is contained in this set.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>element</strong> &#8211; Element to search</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="bintree.BinTree.__len__">
+<tt class="descname">__len__</tt><big>(</big><big>)</big><a class="headerlink" href="#bintree.BinTree.__len__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of elements in this BinNode. This implementation
+traverses the whole tree.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bintree.BinTree.clone">
+<tt class="descname">clone</tt><big>(</big><big>)</big><a class="headerlink" href="#bintree.BinTree.clone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clones the tree.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Clone of the tree.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">BinTree</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="bintree.BinTree.__str__">
+<tt class="descname">__str__</tt><big>(</big><big>)</big><a class="headerlink" href="#bintree.BinTree.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>A rude toString implementation of the tree.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="bintree.BinTree.__weakref__">
+<tt class="descname">__weakref__</tt><a class="headerlink" href="#bintree.BinTree.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="binnode">
+<h2>BinNode<a class="headerlink" href="#binnode" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="bintree.BinNode">
+<em class="property">class </em><tt class="descclassname">bintree.</tt><tt class="descname">BinNode</tt><big>(</big><em>tree</em>, <em>node_or_value</em>, <em>parent</em><big>)</big><a class="headerlink" href="#bintree.BinNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Internal class implementing the tree.</p>
+<dl class="method">
+<dt id="bintree.BinNode.__init__">
+<tt class="descname">__init__</tt><big>(</big><em>tree</em>, <em>node_or_value</em>, <em>parent</em><big>)</big><a class="headerlink" href="#bintree.BinNode.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new node given a parent and a value or copies a node including its children (used for cloning).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>tree</strong> (<em>BinTree</em>) &#8211; The tree this node belongs to.</li>
+<li><strong>node_or_value</strong> (<em>BinNode | object | None</em>) &#8211; The node to copy or the value of this node.</li>
+<li><strong>parent</strong> (<em>BinNode | None</em>) &#8211; The parent of this node.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="bintree.BinNode.parent">
+<tt class="descname">parent</tt><em class="property"> = None</em><a class="headerlink" href="#bintree.BinNode.parent" title="Permalink to this definition">¶</a></dt>
+<dd><p>The parent of this node.</p>
+<p>:type : BinNode | None</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="bintree.BinNode.tree">
+<tt class="descname">tree</tt><em class="property"> = None</em><a class="headerlink" href="#bintree.BinNode.tree" title="Permalink to this definition">¶</a></dt>
+<dd><p>The tree this node belongs to.</p>
+<p>:type : BinTree</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="bintree.BinNode.left">
+<tt class="descname">left</tt><em class="property"> = None</em><a class="headerlink" href="#bintree.BinNode.left" title="Permalink to this definition">¶</a></dt>
+<dd><p>The left child of this node.</p>
+<p>:type : BinNode | None</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="bintree.BinNode.right">
+<tt class="descname">right</tt><em class="property"> = None</em><a class="headerlink" href="#bintree.BinNode.right" title="Permalink to this definition">¶</a></dt>
+<dd><p>The right child of this node.</p>
+<p>:type : BinNode | None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bintree.BinNode.add">
+<tt class="descname">add</tt><big>(</big><em>element</em><big>)</big><a class="headerlink" href="#bintree.BinNode.add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds the object <tt class="docutils literal"><span class="pre">element</span></tt> to this <tt class="docutils literal"><span class="pre">BinNode</span></tt> at the
+right location.</p>
+<p><strong>IMPORTANT:</strong> This implementation must NOT use the
+<tt class="docutils literal"><span class="pre">BinNode</span></tt> constructor, but must use <tt class="docutils literal"><span class="pre">self.tree.create_node(node_or_value,</span> <span class="pre">parent)</span></tt> instead.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>element</strong> &#8211; Element to be added.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The node which was inserted or <tt class="docutils literal"><span class="pre">None</span></tt> if the node already existed.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">BinNode | None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Requires:</strong> <tt class="docutils literal"><span class="pre">element</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">None</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bintree.BinNode.rotate_left">
+<tt class="descname">rotate_left</tt><big>(</big><big>)</big><a class="headerlink" href="#bintree.BinNode.rotate_left" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotates the tree left at this location.</p>
+<p>This will structurally rotate the tree, making the right child the new root of the current subtree and making
+this node the left child of the new root.  The left child of the right child will be the new right child of this
+node.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bintree.BinNode.rotate_right">
+<tt class="descname">rotate_right</tt><big>(</big><big>)</big><a class="headerlink" href="#bintree.BinNode.rotate_right" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotates the tree right at this location.</p>
+<p>This will structurally rotate the tree, making the left child the new root of the current subtree and making
+this node the right child of the new root. The right child of the left child will be the new left child of this
+node.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bintree.BinNode.right_ancestor">
+<tt class="descname">right_ancestor</tt><big>(</big><big>)</big><a class="headerlink" href="#bintree.BinNode.right_ancestor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the closest ancestor of which this element is in its left subtree.</p>
+<p>Currently used by the successor and remove.</p>
+<p>:return The first larger parent of this node. <tt class="docutils literal"><span class="pre">None</span></tt> if no such ancestor exists.
+:rtype: BinNode | None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bintree.BinNode.successor">
+<tt class="descname">successor</tt><big>(</big><big>)</big><a class="headerlink" href="#bintree.BinNode.successor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds the successor of a current node.</p>
+<p>The successor is always the leftmost node of the right subtree or it is the first right ancestor.</p>
+<p>Used by <a class="reference internal" href="#bintree.BinNode.remove" title="bintree.BinNode.remove"><tt class="xref py py-meth docutils literal"><span class="pre">remove()</span></tt></a> and the iterator.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The successor of a node or <tt class="docutils literal"><span class="pre">None</span></tt> if no such successor exists.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">BinNone | None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="bintree.BinNode.remove">
+<tt class="descname">remove</tt><big>(</big><big>)</big><a class="headerlink" href="#bintree.BinNode.remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logically removes the current node from the tree.</p>
+<p>This method may keep the structural node and replace it&#8217;s contents with that of another node.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bintree.BinNode.delete_node">
+<tt class="descname">delete_node</tt><big>(</big><big>)</big><a class="headerlink" href="#bintree.BinNode.delete_node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Structurally delete current node.</p>
+<p><strong>Requires:</strong> This node may have at most 1 child. Otherwise use <a class="reference internal" href="#bintree.BinNode.remove" title="bintree.BinNode.remove"><tt class="xref py py-meth docutils literal"><span class="pre">remove()</span></tt></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bintree.BinNode.search">
+<tt class="descname">search</tt><big>(</big><em>element</em><big>)</big><a class="headerlink" href="#bintree.BinNode.search" title="Permalink to this definition">¶</a></dt>
+<dd><p>Searches in the tree to the location of an element.</p>
+<p>Used by the remove method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>element</strong> &#8211; The element to look for.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The subtree rooted at searched element or None if it is not found.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">BinNode | None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="bintree.BinNode.first">
+<tt class="descname">first</tt><big>(</big><big>)</big><a class="headerlink" href="#bintree.BinNode.first" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the first (leftmost) node in the subtree.</p>
+<p>Used by the successor method and the iterator.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">First (leftmost) node in the subtree.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">BinNone</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="bintree.BinNode.last">
+<tt class="descname">last</tt><big>(</big><big>)</big><a class="headerlink" href="#bintree.BinNode.last" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the last (rightmost) node in the subtree.</p>
+<p>Currently not used.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Last (rightmost) node in the subtree.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">BinNone</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="bintree.BinNode.__bool__">
+<tt class="descname">__bool__</tt><big>(</big><big>)</big><a class="headerlink" href="#bintree.BinNode.__bool__" title="Permalink to this definition">¶</a></dt>
+<dd><p>A BinNode is always True.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="bintree.BinNode.__len__">
+<tt class="descname">__len__</tt><big>(</big><big>)</big><a class="headerlink" href="#bintree.BinNode.__len__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of elements in this <tt class="docutils literal"><span class="pre">BinNode</span></tt>. This implementation
+traverses the whole tree.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bintree.BinNode.__str__">
+<tt class="descname">__str__</tt><big>(</big><big>)</big><a class="headerlink" href="#bintree.BinNode.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gives a crude <tt class="docutils literal"><span class="pre">__str__</span></tt> implementation. For better results use AsciiTreeVisualizer.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bintree.BinNode.is_left">
+<tt class="descname">is_left</tt><big>(</big><big>)</big><a class="headerlink" href="#bintree.BinNode.is_left" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if this node is the left child of its parent.
+Returns False when the node is the root element.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="bintree.BinNode.__weakref__">
+<tt class="descname">__weakref__</tt><a class="headerlink" href="#bintree.BinNode.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bintree.BinNode.is_right">
+<tt class="descname">is_right</tt><big>(</big><big>)</big><a class="headerlink" href="#bintree.BinNode.is_right" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if this node is the right child of its parent.
+Returns False when the node is the root element.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bintree.BinNode.attach_left">
+<tt class="descname">attach_left</tt><big>(</big><em>new_node</em><big>)</big><a class="headerlink" href="#bintree.BinNode.attach_left" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attaches a new node to the left side of the current node. This
+method also sets the parent of the new child and also works when the
+child is None.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>new_node</strong> (<em>BinNode</em>) &#8211; Node to attach.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="bintree.BinNode.attach_right">
+<tt class="descname">attach_right</tt><big>(</big><em>new_node</em><big>)</big><a class="headerlink" href="#bintree.BinNode.attach_right" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attaches a new node to the right side of the current node. This
+method also sets the parent of the new child and also works when the
+child is None.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>new_node</strong> (<em>BinNode</em>) &#8211; Node to attach.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Module 7: Trees</a><ul>
+<li><a class="reference internal" href="#bintree">BinTree</a></li>
+<li><a class="reference internal" href="#binnode">BinNode</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="#">Trees 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, University of Twente.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

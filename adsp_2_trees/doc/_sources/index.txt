@@ -1,0 +1,21 @@
+.. Trees documentation master file, created by
+   sphinx-quickstart on Sat Jan 31 13:39:44 2015.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Module 7: Trees
+===============
+
+BinTree
+-------
+
+.. autoclass:: bintree.BinTree
+   :special-members:
+   :members:
+
+BinNode
+-------
+
+.. autoclass:: bintree.BinNode
+   :special-members:
+   :members:

@@ -1,0 +1,36 @@
+# Lines can start with:
+#  # - comment
+#  B - a new BinTree
+#  S - a saved tree
+#  C - continue from last line
+# Followed by tokens:
+#  +<N> - add N to the tree
+#  -<N> - remove N from the tree
+#  r<N> - rotate node N to the right
+#  l<N> - rotate node N to the left
+#  A    - show using the AsciiTreeVisualizer
+#  %    - save the tree
+#  #    - ignore rest of line
+#  R<N> - do a big random test using N as seed
+#  R    - do a big random test without a seed
+#
+#  After each line or error an ascii representation is printed.
+#  After each add or remove operation a short representation is printed.
+
+# Deleting from empty tree
+B -40
+
+# A clean BinTree
+B +50 +10 +30 +20 +40 +60 +90 +70 +80
+# Rotation
+C l30 r50 A l10 r40 %
+
+S -6	# Nonexistant item
+S -10	# Replace with successor
+S -60	# Replace with successor
+S -50	# successor.parent == this
+S -40	# right leaf
+S -20	# left leaf
+S -90	# no right subtree
+
+B R				# Big random test on BinTrees
