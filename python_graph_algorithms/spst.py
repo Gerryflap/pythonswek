@@ -27,12 +27,13 @@ def relax(e: edge):
 WriteDOTFiles = True
 
 # Use these options to select the graphs to test your algorithms on:
-TestInstances = ["weightedexample.gr"]
+# TestInstances = ["weightedexample.gr"]
 # TestInstances=["randomplanar.gr"]
 # TestInstances=["negativeweightexample.gr"]
 # TestInstances=["negativeweightcycleexample.gr"]
 # TestInstances=["WDE100.gr","WDE200.gr","WDE400.gr","WDE800.gr","WDE2000.gr"]; WriteDOTFiles=False
 # TestInstances=["bbf2000.gr"]
+TestInstances = ["graph%i.gr" % i for i in range(1, 8)]
 
 # If you have implemented a module fastgraphs.py (compatible with basicgraphs.py),
 # you can set this option to True:
@@ -81,7 +82,8 @@ def BellmanFordDirected(G: graph, start):
 
     for e in G.E():
         if e.tail().dist is not None and e.head().dist > e.tail().dist + e.weight:
-            return None
+            #raise Exception("Negative weight cycle found!")
+            print("!!!!!!!!!!!!!!!!!!             Negative weight cycle found                !!!!!!!!!!!!!!!!!!")
 
 
 def DijkstraUndirected(G, start):
